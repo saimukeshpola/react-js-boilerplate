@@ -1,0 +1,68 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  "files.insertFinalNewline": true,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.eol": "\n",
+  "files.encoding": "utf8",
+  "editor.insertSpaces": true,
+  "editor.tabSize": 2,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+
+  "[javascript]": {
+    "editor.formatOnSave": true
+  },
+  "[javascriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[typescript]": {
+    "editor.formatOnSave": true
+  },
+  "[typescriptreact]": {
+    "editor.formatOnSave": true
+  },
+  "[mdx]": {
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.formatOnSave": true
+  },
+
+  "javascript.preferences.quoteStyle": "single",
+  "javascript.format.semicolons": "insert",
+  "typescript.preferences.quoteStyle": "single",
+  "typescript.format.semicolons": "insert",
+
+  "npm.exclude": "**/packages/**",
+
+  "eslint.validate": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "mdx"
+  ],
+
+  "jest.pathToJest": "npm test --",
+
+  "json.schemas": [
+    {
+      "fileMatch": ["/packages/cosmos-core/src/themeDefinition.json"],
+      "url": "./packages/cosmos-core/src/theme.schema.json"
+    },
+    {
+      "fileMatch": ["/.huskyrc.json"],
+      "url": "https://json.schemastore.org/huskyrc"
+    },
+    {
+      "fileMatch": ["/lerna.json"],
+      "url": "https://json.schemastore.org/lerna"
+    },
+    { "fileMatch": ["/.vsls.json"], "url": "https://json.schemastore.org/vsls" }
+  ]
+}
