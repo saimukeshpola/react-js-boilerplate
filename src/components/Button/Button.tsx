@@ -1,4 +1,5 @@
 import React from "react";
+import styled from "styled-components";
 import "./button.css";
 
 export interface ButtonProps {
@@ -24,6 +25,8 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
+const ButtonWrapper = styled.button``;
+
 /**
  * Primary UI component for user interaction
  */
@@ -38,7 +41,7 @@ export const Button: React.FC<ButtonProps> = ({
     ? "storybook-button--primary"
     : "storybook-button--secondary";
   return (
-    <button
+    <ButtonWrapper
       type="button"
       className={["storybook-button", `storybook-button--${size}`, mode].join(
         " "
@@ -47,6 +50,6 @@ export const Button: React.FC<ButtonProps> = ({
       {...props}
     >
       {label}
-    </button>
+    </ButtonWrapper>
   );
 };
