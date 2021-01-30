@@ -2,6 +2,7 @@ import { forwardRef, PropsWithoutRef, Ref } from "react";
 import styled from "styled-components";
 import logo from "./logo.svg";
 import "./Splash.css";
+import { Button } from "antd";
 
 export enum GREETIN_ACTION {
   MORNING,
@@ -18,8 +19,7 @@ const StyledActionWrapper = styled.div`
   display: flex;
   align-items: center;
   > button {
-    margin: 0.5rem;
-    padding: 0.25rem;
+    margin: 0.25rem;
   }
 `;
 
@@ -32,15 +32,15 @@ export const Splash: React.FunctionComponent<SplashProps> = forwardRef(
           <img src={logo} className="App-logo" alt="logo" />
           {message}
           <StyledActionWrapper>
-            <button onClick={() => onGreetingChange(GREETIN_ACTION.MORNING)}>
+            <Button onClick={() => onGreetingChange(GREETIN_ACTION.MORNING)}>
               Morning
-            </button>
-            <button onClick={() => onGreetingChange(GREETIN_ACTION.AFTERNOON)}>
+            </Button>
+            <Button onClick={() => onGreetingChange(GREETIN_ACTION.AFTERNOON)}>
               Afternoon
-            </button>
-            <button onClick={() => onGreetingChange(GREETIN_ACTION.NIGHT)}>
+            </Button>
+            <Button onClick={() => onGreetingChange(GREETIN_ACTION.NIGHT)}>
               Night
-            </button>
+            </Button>
           </StyledActionWrapper>
         </header>
       </div>

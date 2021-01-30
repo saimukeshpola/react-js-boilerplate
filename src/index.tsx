@@ -6,6 +6,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import HomePage from "./pages/Home";
 import store from "./redux/store";
 import { Provider } from "react-redux";
+import "antd/dist/antd.css";
 
 ReactDOM.render(
   <React.StrictMode>
