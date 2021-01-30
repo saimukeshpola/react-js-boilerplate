@@ -6,10 +6,11 @@ import {
   sayGoodNight,
 } from "../redux/actions";
 import { DataStore } from "../redux/redux-store.types";
+import { getGreetingMessage } from "../redux/selectors";
 
 const mapStateToProps = (state: DataStore) => {
-  const { greeting } = state;
-  return { ...greeting };
+  const { message } = getGreetingMessage(state);
+  return { message };
 };
 
 const connector = connect(mapStateToProps);
