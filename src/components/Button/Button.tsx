@@ -30,7 +30,7 @@ const ButtonWrapper = styled.button``;
 /**
  * Primary UI component for user interaction
  */
-export const Button: React.FC<ButtonProps> = ({
+const Button: React.FC<ButtonProps> = ({
   primary = false,
   size = "medium",
   backgroundColor,
@@ -53,3 +53,5 @@ export const Button: React.FC<ButtonProps> = ({
     </ButtonWrapper>
   );
 };
+
+export default Button;
